@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" ng-app="pasquaJove">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XX Pasqua Jove</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link href="image/chl_ico.ico" rel="shortcut icon">
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"> <!--FUENTE Fontawesome-->
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,300' rel='stylesheet' type='text/css'> <!--FUENTE Merriweather-->
+  <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>  <!--FUENTE Raleway Heavy-->
+  <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:700,800' rel='stylesheet' type='text/css'> <!--FUENTE Merriweather Sans-->
+  <link href="css/estilos_generales.css" rel="stylesheet" type="text/css"><!--Estilos generales-->
+  <link href="css/estilo_cabecera.css" rel="stylesheet" type="text/css"><!--Estilo cabecera-->
+  <link href="css/queries.css" rel="stylesheet" type="queries/css"><!--Media Queries-->
+
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-translate/angular-translate.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/maincontroller.controller.js"></script>
+
+</head>
+<body ng-controller="MainController as vm">
+
+  <!-- INICIO CABECERA  -->
+  <div id="cabecera">
+      <div class="cabecera_negro">
+          <div class="cabecera_texto">
+              <img id="logo_chl" src="svg/logo_christi.svg" alt="Christifideles Laici">
+              <h1>XX<br>PASCUA<br>JOVEN</h1>
+              <img id="lema_01" src="svg/lema_01.svg" alt="Ven y sígueme">
+              <img id="lema_02" src="svg/lema_02.svg" alt="Mt 19:21">
+          </div>
+      </div>
+  </div>
+  
+  <!-- INICIO INTRODUCCIÓN  -->
+  <div class="caja_inicial"><p class="texto_inicial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum lorem in sollicitudin imperdiet. Praesent hendrerit consectetur maximus. In eu neque arcu. Nunc egestas erat erat, et scelerisque libero rhoncus quis. Etiam id neque quam. Quisque id turpis ipsum. Duis non egestas justo.</p></div>
+  
+  <!-- INICIO INFO ADICIONAL  -->
+  <div class="boton_01">
+      <p class="texto_boton_01">Información adicional</p>
+      <i class="fa fa-angle-down"></i>
+  </div>
+  <div class="caja_adicional">
+      <ul>
+          <li class="negrita">¿Jóvenes de qué edad?</li>
+          <li>De entre 15 y 30 años.</li>
+          <li class="negrita">¿Cuándo es?</li>
+          <li>Del 24 al 27 de marzo de 2016</li>
+          <li class="negrita">¿Dónde es?</li>
+          <li>Casa de colonias La Conreria</li>
+          <li>Ctra. Badalona-Mollet km. 6 (BV-500) - Tiana (A 30 mins de BCN)</li>
+          <li class="negrita">¿Qué hay que llevar?</li>
+          <li>Ropa y calzado cómodo, saco de dormir o juego de sábanas, libreta, bolígrafo y linterna.</li>
+          <li>Nota:<span class="light"> Si eres menor de edad deberás descargarte la autorización y traerla rellenada y firmada por tu padre/madre o tutor legal.</span></li>
+          <li><div class="descarga"><p>Descargar autorización</p><i class="fa fa-download"></i></div></li>
+      </ul>
+      <ul class="ul_b">
+          <li class="negrita">¿Jóvenes de qué edad?</li>
+          <li>De entre 15 y 30 años.</li>
+          <li class="negrita">¿Cuándo es?</li>
+          <li>Del 24 al 27 de marzo de 2016</li>
+          <li class="negrita">¿Dónde es?</li>
+          <li>Casa de colonias La Conreria</li>
+          <li>Ctra. Badalona-Mollet km. 6 (BV-500) - Tiana (A 30 mins de BCN)</li>
+          <li class="negrita">¿Qué hay que llevar?</li>
+          <li>Ropa y calzado cómodo, saco de dormir o juego de sábanas, libreta, bolígrafo y linterna.</li>
+          <li>Nota:<span class="light"> Si eres menor de edad deberás descargarte la autorización y traerla rellenada y firmada por tu padre/madre o tutor legal.</span></li>
+      </ul>
+  </div>
+  
+  <!-- INICIO BOTONES CONTACTO  -->
+  <div id="botones">
+      <div class="botones_negro">
+          <p class="pregunta">¿Estás interesado?</p>
+          <div class="b_contacto_01" ng-click="vm.signUp()">
+              <span class="texto_boton_02_a">¡APÚNTATE!</span>
+          </div>
+          <div class="b_contacto_02" ng-click="vm.contactUs()">
+               <span class="texto_boton_02_b">¡CONTACTA CON NOSOTROS!</span>
+          </div>
+      </div>
+  </div>
+  
+  <!-- INICIO INSCRIPCION  -->
+  <form class="contacto_01 active" ng-show="vm.showInscription">
+      <div>
+          <p class="p_contacto">Nombre</p>
+          <input type="text" name="textfield" class="textfield_01" required>
+          <p class="p_contacto">Apellidos</p>
+          <input type="text" name="textfield" class="textfield_01">
+          <p class="p_contacto">Fecha de nacimiento (DD/MM/AAAA)</p>
+          <input type="text" name="textfield" class="textfield_01" required>
+          <p class="p_contacto">Correo electrónico</p>
+          <input type="email" name="textfield" class="textfield_01" required>
+          <p class="p_contacto">Teléfono de contacto</p>
+          <input type="tel" name="textfield" class="textfield_01" required>
+          <p class="p_contacto">Grupo o movimiento al que perteneces</p>
+          <input type="text" name="textfield" class="textfield_01">
+          <p class="p_contacto">¿Quién te ha invitado?</p>
+          <input type="text" name="textfield" class="textfield_01">
+          <p class="p_contacto">¿Algún problema con la comida?</p>
+          <input type="checkbox" name="checkbox" class="checkbox"><span class="radio">Diabetes</span>
+          <input type="checkbox" name="checkbox" class="checkbox"><span class="radio">Celiaquía</span>
+          <input type="checkbox" name="checkbox" class="checkbox"><span class="radio">Alergias</span>
+          <input type="checkbox" name="checkbox" class="checkbox"><span class="radio">Otros</span>
+          <input class="boton_03" type="submit" value="Enviar">
+      </div>
+  </form>
+  
+  <!-- INICIO CONTACTO  -->
+  <form class="contacto_02 active" ng-show="vm.showContact">
+      <div>
+          <p class="p_contacto">Nombre</p>
+          <input type="text" name="textfield" class="textfield_01" required>
+          <p class="p_contacto">Correo electrónico</p>
+          <input type="email" name="textfield" class="textfield_01" required>
+          <p class="p_contacto">Comentarios</p>
+          <textarea class="textfield_02" required></textarea>
+          <input class="boton_03" type="submit" value="Enviar"><br>
+          <p class="texto_inicial">También puedes contactar con nosotros en:<br>
+              <a href="mailto:someone@example.com?Subject=Hello%20again" class="p_correo" target="new">pasquajove@gmail.com</a><br>
+             En caso de que prefieras contactar con nosotros por teléfono, 
+             envíanos tu número de contacto y nos encargaremos de llamarte.</p>
+      </div>
+  </form>
+  
+  <!-- INICIO FOOTER  -->
+  <div class="caja_footer">
+      <p>¡También nos puedes encontrar en las redes sociales!</p>
+      <div>
+          <a href="https://www.facebook.com/Pascua-Joven-CHL-318741938336975/" title="Facebook CHL" target="new">
+              <img class="redes_sociales" src="svg/icono_facebook.svg" alt="facebook">
+          </a>
+          <a href="https://www.instagram.com/chl_pascuajoven/" title="Instagram CHL" target="new">
+              <img class="redes_sociales" src="svg/icono_instagram.svg" alt="instagram">
+          </a>
+      </div>
+  </div>
+
+</body>
+</html>
