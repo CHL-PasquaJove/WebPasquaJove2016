@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>XX Pasqua Jove</title>
-  <!--Hola que haces-->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link href="image/chl_ico.ico" rel="shortcut icon">
   <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"> <!--FUENTE Fontawesome-->
@@ -22,6 +21,32 @@
   <script src="bower_components/angular-translate/angular-translate.js"></script>
   <script src="js/app.js"></script>
   <script src="js/maincontroller.controller.js"></script>
+  
+  <script type="text/javascript">  	
+		$(function() {
+			$(".boton_01").click(function() {
+				$(".caja_adicional").toggleClass("active");
+                                $(".fa-angle-down").toggleClass("active");
+			});
+                        $(".b_contacto_01").click(function() {
+				$(".contacto_01").toggleClass("active");
+                                $(".b_contacto_01").toggleClass("active");
+                                $(".texto_boton_02_a").toggleClass("active");
+                                /*$(".b_contacto_02").toggleClass("");
+                                $(".texto_boton_02_b").toggleClass("");*/
+			});
+                        $(".b_contacto_02").click(function() {
+				$(".contacto_02").toggleClass("active");
+                                $(".b_contacto_02").toggleClass("active");
+                                $(".texto_boton_02_b").toggleClass("active");
+                                /*$(".b_contacto_01").toggleClass("");
+                                $(".texto_boton_02_a").toggleClass("");*/
+			});
+                        /*$(".boton_03").click(function() {
+				$(".boton_03").toggleClass("active");
+			});*/
+		});	  
+        </script>
 
 </head>
 <body ng-controller="MainController as vm">
@@ -39,7 +64,7 @@
   </div>
   
   <!-- INICIO INTRODUCCIÓN  -->
-  <div class="caja_inicial"><p class="texto_inicial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum lorem in sollicitudin imperdiet. Praesent hendrerit consectetur maximus. In eu neque arcu. Nunc egestas erat erat, et scelerisque libero rhoncus quis. Etiam id neque quam. Quisque id turpis ipsum. Duis non egestas justo.</p></div>
+  <div class="caja_inicial"><p class="texto_inicial">Si existiera un camino en el que pudieras descubrir realmente quién eres y qué sentido tiene toda tu vida… ¿Acaso no lo tomarías?</p></div>
   
   <!-- INICIO INFO ADICIONAL  -->
   <div class="boton_01">
@@ -58,19 +83,20 @@
           <li class="negrita">¿Qué hay que llevar?</li>
           <li>Ropa y calzado cómodo, saco de dormir o juego de sábanas, libreta, bolígrafo y linterna.</li>
           <li>Nota:<span class="light"> Si eres menor de edad deberás descargarte la autorización y traerla rellenada y firmada por tu padre/madre o tutor legal.</span></li>
-          <li><div class="descarga"><p>Descargar autorización</p><i class="fa fa-download"></i></div></li>
+          
       </ul>
+      <div class="descarga"><p>Descargar autorización</p><i class="fa fa-download"></i></div>
       <ul class="ul_b">
-          <li class="negrita">¿Jóvenes de qué edad?</li>
-          <li>De entre 15 y 30 años.</li>
-          <li class="negrita">¿Cuándo es?</li>
-          <li>Del 24 al 27 de marzo de 2016</li>
-          <li class="negrita">¿Dónde es?</li>
-          <li>Casa de colonias La Conreria</li>
-          <li>Ctra. Badalona-Mollet km. 6 (BV-500) - Tiana (A 30 mins de BCN)</li>
-          <li class="negrita">¿Qué hay que llevar?</li>
-          <li>Ropa y calzado cómodo, saco de dormir o juego de sábanas, libreta, bolígrafo y linterna.</li>
-          <li>Nota:<span class="light"> Si eres menor de edad deberás descargarte la autorización y traerla rellenada y firmada por tu padre/madre o tutor legal.</span></li>
+          <li class="negrita">¿Cuánto cuesta?</li>
+          <li>El precio inicial es de <span class="negrita">125€</span>.<br>
+              La fecha límite para inscribirse y realizar el pago es el <span class="negrita">21 de Marzo</span>, a través de un ingreso en la cuenta:<br>
+              <span class="negrita">0487-1009-47-2000039186</span><br>
+              Poniendo en el concepto: nombre y apellidos + Pascua
+Nota: A partir del segundo hermano (este incluido) se aplicará la tarifa familiar reducida de 105€
+          </li>
+          <li class="negrita">Este año… </li>
+          <li>Consigue un descuento de 15€ si reservas tu plaza antes del 6 de Marzo (paga y señal de 50€).
+El descuento es aplicable tanto a la tarifa regular como a la tarifa familiar reducida.</li>          
       </ul>
   </div>
   
@@ -88,7 +114,7 @@
   </div>
   
   <!-- INICIO INSCRIPCION  -->
-  <form class="contacto_01 active" ng-show="vm.showInscription">
+  <form class="contacto_01" ng-show="vm.showInscription">
       <div>
           <p class="p_contacto">Nombre</p>
           <input type="text" name="textfield" class="textfield_01" required>
@@ -105,16 +131,16 @@
           <p class="p_contacto">¿Quién te ha invitado?</p>
           <input type="text" name="textfield" class="textfield_01">
           <p class="p_contacto">¿Algún problema con la comida?</p>
-          <input type="checkbox" name="checkbox" class="checkbox"><span class="radio">Diabetes</span>
-          <input type="checkbox" name="checkbox" class="checkbox"><span class="radio">Celiaquía</span>
-          <input type="checkbox" name="checkbox" class="checkbox"><span class="radio">Alergias</span>
-          <input type="checkbox" name="checkbox" class="checkbox"><span class="radio">Otros</span>
+          <p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox"><span class="radio">Diabetes</span></p>
+          <p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox"><span class="radio">Celiaquía</span></p>
+          <p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox"><span class="radio">Alergias</span></p>
+          <p class="checkbox-inline"><input type="checkbox" name="checkbox" class="checkbox"><span class="radio">Otros</span></p>
           <input class="boton_03" type="submit" value="Enviar">
       </div>
   </form>
   
   <!-- INICIO CONTACTO  -->
-  <form class="contacto_02 active" ng-show="vm.showContact">
+  <form class="contacto_02" ng-show="vm.showContact">
       <div>
           <p class="p_contacto">Nombre</p>
           <input type="text" name="textfield" class="textfield_01" required>

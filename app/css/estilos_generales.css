@@ -20,6 +20,9 @@ a{
     text-decoration: none;
     color:inherit;
 }
+a:hover{
+    color:inherit;
+}
 /*INICIO INTRODUCCION*/
 .texto_inicial{
     margin:0;
@@ -38,7 +41,7 @@ a{
 /*BOTON INFO ADICIONAL*/
 .boton_01{
     display:table;
-    width:90.85%;
+    width: 93.74%;
     height:60px;
     margin-left: 3.13%;
     margin-right: 3.13%;
@@ -108,7 +111,8 @@ li{
 }
 .descarga{
     display: block;
-    margin:5px auto;
+    margin: 10px auto;
+    margin-bottom: 25px;
     height: 50px;
     width: 265px;
     background-color: #ffffff;
@@ -119,16 +123,16 @@ li{
 .descarga p{
     font-family: 'Merriweather Sans', sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 17px;
     color: #607d8b;
     margin:0;
-    margin-top: 13.5px;
+    margin-top: 12px;
 }
 .fa-download{
     font-size: 25px;
     color: #607d8b;
     float:right;
-    margin-top:-25px;
+    margin-top: -22px;
     margin-right: 10px;
 } 
 /*INICIO BOTONES*/
@@ -165,6 +169,7 @@ li{
     background-color:rgba(255,255,255,0.75);
     border: solid 2.5px #ffffff;
     border-radius: 5px;
+    cursor:pointer;
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
@@ -221,7 +226,7 @@ li{
 .textfield_01,.textfield_02{
     margin-top: 4px;
     margin-bottom: 15px;
-    height:22px;
+    height: 35px;
     padding: 5px;
     width:95.5%;
     max-width: 500px;
@@ -251,18 +256,24 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus {
     border:solid 1px #607d8b;
     outline: 0;
 }
-.checkbox{
+.checkbox-inline{
+    display: table;
     margin-top: 7px;
-    width:15px;
-    height:15px;
+}
+.checkbox{
+    width:20px;
+    height:20px;
+    display:table-cell;
+    vertical-align: middle;
 }
 .radio {
     font-family: 'Merriweather', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     color: #607d8b;
     font-weight: 300;
     margin-left: 2px;
-    margin-right: 10px;
+    display:table-cell;
+    vertical-align: middle;
 }
 .boton_03{
     display:block;
@@ -274,7 +285,7 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus {
     border-radius: 5px;
     background-color: #ffffff;
     font-family: 'Merriweather Sans', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     color: #607d8b;
     font-weight: 700;
     outline: 0;
@@ -292,6 +303,9 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus {
 .p_correo{
     font-weight:700;
     line-height: 3;
+    color:#607d8b;
+}
+.p_correo:hover{
     color:#607d8b;
 }
 /*INICIO FOOTER*/
