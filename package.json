@@ -3,7 +3,7 @@
   "private": true,
   "name": "xx-pasqua-jove",
   "description": "A Pasqua Jove web with JS",
-  "repository": "https://github.com/VictorDeBlas/PasquaJove",
+  "repository": "https://github.com/CHL-PasquaJove/WebPasquaJove2016",
   "license": "",
   "devDependencies": {
     "karma": "^0.12.16",

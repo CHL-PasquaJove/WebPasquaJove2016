@@ -4,17 +4,28 @@ var pasquaJoveApp;
 
 pasquaJoveApp = angular
 	.module('pasquaJove', [
-		'ngRoute'
+		'ngRoute',
+		'pascalprecht.translate'
 	]);
-
-require('./maincontroller.controller.js');
 
 pasquaJoveApp.config(configFunction);
 
-configFunction.$inject = ['$routeProvider'];
+configFunction.$inject = ['$routeProvider', '$translateProvider'];
 
-function configFunction($routeProvider) {
+function configFunction($routeProvider, $translateProvider) {
+
+	$translateProvider.useStaticFilesLoader({
+		prefix: './i18n/language_',
+		suffix: '.json'
+	});
+	$translateProvider.preferredLanguage('es');
+
 	$routeProvider
+		.when('/responsables', {
+			templateUrl:'',
+			controller: '',
+			controllerAs: 'vm'
+		})
 		.otherwise({
 			redirectTo:'/',
 			controller: 'MainController',

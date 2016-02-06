@@ -2,7 +2,7 @@
   "name": "xx-pasqua-jove",
   "description": "A Pasqua Jove web with JS",
   "version": "0.0.0",
-  "homepage": "https://github.com/VictorDeBlas/PasquaJove",
+  "homepage": "https://github.com/CHL-PasquaJove/WebPasquaJove2016",
   "license": "",
   "private": true,
   "dependencies": {
@@ -11,6 +11,7 @@
     "jquery": "~2.1.1",
     "bootstrap": "~3.1.1",
     "angular-route": "1.4.x",
-    "angular-translate": "~2.9.0"
+    "angular-translate": "~2.9.0",
+    "angular-translate-loader-static-files":"~2.9.0"
   }
 }
