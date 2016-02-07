@@ -5,9 +5,9 @@ angular
 	.controller('MainController', MainController);
 
 
-MainController.$inject = [];
+MainController.$inject = ['$translate'];
 
-function MainController() {
+function MainController($translate) {
 	var vm = this;
 	
 	vm.showContact = false;
@@ -23,6 +23,7 @@ function MainController() {
 	vm.clickInfo = clickInfo;
 	vm.submitNewUserForm = submitNewUserForm;
 	vm.submitContactForm = submitContactForm;
+	vm.changeLanguage = changeLanguage;
 
 	////////////////
 	function contactUs() {
@@ -45,6 +46,10 @@ function MainController() {
 
 	function submitContactForm() {
 		console.log('contact', vm.contactForm);
+	}
+
+	function changeLanguage(lang) {
+		$translate.use(lang);
 	}
 
 }

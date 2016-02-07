@@ -21,14 +21,17 @@ function configFunction($routeProvider, $translateProvider) {
 	$translateProvider.preferredLanguage('es');
 
 	$routeProvider
+		.when('/', {
+			templateUrl: 'partials/main.html',
+			controller: 'MainController',
+			controllerAs: 'vm'
+		})
 		.when('/responsables', {
-			templateUrl:'',
+			templateUrl:'partials/responsables.html',
 			controller: '',
 			controllerAs: 'vm'
 		})
 		.otherwise({
-			redirectTo:'/',
-			controller: 'MainController',
-			controllerAs: 'vm'
+			redirectTo:'/'
 		})
 }
